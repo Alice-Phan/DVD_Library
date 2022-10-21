@@ -1,5 +1,7 @@
 package com.sal.dvdlibrary.ui;
 
+import com.sal.dvdlibrary.dto.DvD;
+
 public class DvdLibraryView {
     private UserIO io;
     // implement a constructor that initializes the io member field
@@ -10,18 +12,28 @@ public class DvdLibraryView {
     public int printMenuAndGetSelection() {
         //implement
         io.print("Main Menu");
-        io.print("1- List DVD");
-        io.print("2- List DVD");
-        io.print("3- List DVD");
-        io.print("4- List DVD");
-        io.print("5- List DVD");
-        io.print("6- List DVD");
+        io.print("1- List Dvds");
+        io.print("2- Create New Dvd");
+        io.print("3- View a Dvd");
+        io.print("4- Remove a Dvd");
+        io.print("5- Edit a Dvd");
+        io.print("6- Exit");
 
-
+        return io.readInt("Please select from the above choices", 1, 6);
 
     }
     public int printEditMenuAndGetSelection() {
         //implement
+        io.print("Edit DVD Menu");
+        io.print("1- Edit title");
+        io.print("2- Edit release date");
+        io.print("3- Edit MPAA rating");
+        io.print("4- Edit director's name");
+        io.print("5- Edit user rating");
+        io.print("6- Exit");
+
+        return io.readInt("Please select from the above choices", 1, 6);
+
     }
     /*
      This method prompts the user for dvd ID, First Name, Last Name, and Cohort,
