@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2222899e-7575-48e5-b989-b64bdf57520b" name="Changes" comment="Worked on DvD class">
+    <list default="true" id="2222899e-7575-48e5-b989-b64bdf57520b" name="Changes" comment="Write methods to print Menu and Edit menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sal/dvdlibrary/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sal/dvdlibrary/dao/DvdLibraryDaoFileImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/dao/DvdLibraryDaoFileImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sal/dvdlibrary/dto/DvD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/dto/DvD.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/sal/dvdlibrary/ui/DvdLibraryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/ui/DvdLibraryView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,7 +60,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666324445200</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Write methods to print Menu and Edit menu">
+      <created>1666326433965</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666326433965</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -80,6 +84,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Created all the need packages, interfaces, classes. Created method that displays the menu" />
     <MESSAGE value="Worked on DvD class" />
-    <option name="LAST_COMMIT_MESSAGE" value="Worked on DvD class" />
+    <MESSAGE value="Write methods to print Menu and Edit menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Write methods to print Menu and Edit menu" />
   </component>
 </project>

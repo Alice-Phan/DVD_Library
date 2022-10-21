@@ -2,6 +2,8 @@ package com.sal.dvdlibrary.ui;
 
 import com.sal.dvdlibrary.dto.DvD;
 
+import java.util.List;
+
 public class DvdLibraryView {
     private UserIO io;
     // implement a constructor that initializes the io member field
@@ -41,6 +43,20 @@ public class DvdLibraryView {
      */
     public DvD getNewDvDInfo() {
         //implement
+        String title = io.readString("Please enter DVD title");
+        String releaseDate = io.readString("Please enter the release date");
+        String mpaa = io.readString("Please enter MPAA rating");
+        String directorsName = io.readString("Please enter director's name");
+        String studio = io.readString("Please enter Studio");
+        String userRating = io.readString("Please enter user rating");
+        DvD currentDvD = new DvD(title);
+        currentDvD.setReleaseDate(releaseDate);
+        currentDvD.setMPAA(mpaa);
+        currentDvD.setDirectorsName(directorsName);
+        currentDvD.setStudio(studio);
+        currentDvD.setUserRating(userRating);
+
+        return currentDvD;
     }
 
     /*
@@ -65,6 +81,17 @@ public class DvdLibraryView {
      */
     public void displayDvdList(List<DvD> dvdList) {
         //implement
+        for (DvD currentDvd : dvdList) {
+            String dvdInfo = String.format("#%s : %s %s",
+                    currentDvd.getTitle(),
+                    currentDvd.getReleaseDate(),
+                    currentDvd.getMPAA(),
+                    currentDvd.getDirectorsName(),
+                    currentDvd.getStudio(),
+                    currentDvd.getUserRating());
+            io.print(dvdInfo);
+        }
+        io.readString("Please hit enter to continue.");
     }
 
     public void displayDisplayAllBanner() {
