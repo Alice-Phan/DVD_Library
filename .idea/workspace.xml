@@ -1,18 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2222899e-7575-48e5-b989-b64bdf57520b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/dvdTest.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/controller/DvdLibraryController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/dao/DvdLibraryDaoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/dao/DvdLibraryDaoFileImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/dao/dvdLibraryDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/dto/DvD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/ui/DvdLibraryView.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/ui/UserIO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/ui/UserIOConsoleImpl.java" afterDir="false" />
+    <list default="true" id="2222899e-7575-48e5-b989-b64bdf57520b" name="Changes" comment="Created all the need packages, interfaces, classes. Created method that displays the menu">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sal/dvdlibrary/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sal/dvdlibrary/controller/DvdLibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/controller/DvdLibraryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sal/dvdlibrary/dao/DvdLibraryDaoException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/dao/DvdLibraryDaoException.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sal/dvdlibrary/dao/DvdLibraryDaoFileImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/dao/DvdLibraryDaoFileImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sal/dvdlibrary/dao/dvdLibraryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/dao/dvdLibraryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sal/dvdlibrary/dto/DvD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/dto/DvD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sal/dvdlibrary/ui/DvdLibraryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/ui/DvdLibraryView.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,6 +52,14 @@
       <option name="presentableId" value="Default" />
       <updated>1666302090484</updated>
     </task>
+    <task id="LOCAL-00001" summary="Created all the need packages, interfaces, classes. Created method that displays the menu">
+      <created>1666321850393</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666321850393</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -67,5 +72,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Created all the need packages, interfaces, classes. Created method that displays the menu" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created all the need packages, interfaces, classes. Created method that displays the menu" />
   </component>
 </project>

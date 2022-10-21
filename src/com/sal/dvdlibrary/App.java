@@ -1,12 +1,18 @@
 package com.sal.dvdlibrary;
 
 import com.sal.dvdlibrary.controller.DvdLibraryController;
+import com.sal.dvdlibrary.ui.DvdLibraryView;
+import com.sal.dvdlibrary.ui.UserIO;
+import com.sal.dvdlibrary.ui.UserIOConsoleImpl;
 
 public class App {
     public static void main(String[] args) {
     /*
     Instantiate the UserIO, DvDLibraryView, dvdLibraryDao, DvdLibraryController classes and call the run method
      */
+        UserIO myIo = new UserIOConsoleImpl();
+        DvdLibraryView myView = new DvdLibraryView(myIo);
+        dvdLibraryDao myDao = new DvdLibraryDaoFileImpl();
         DvdLibraryController controller = new DvdLibraryController(myDao, myView);
         controller.run();
     }

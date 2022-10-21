@@ -1,4 +1,4 @@
 package com.sal.dvdlibrary.dao;
 
-public interface DvdLibraryDaoFileImpl {
+public class DvdLibraryDaoFileImpl {
 }

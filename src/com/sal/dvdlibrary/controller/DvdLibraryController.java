@@ -1,10 +1,10 @@
 package com.sal.dvdlibrary.controller;
 
 import com.sal.dvdlibrary.dao.DvdLibraryDaoException;
-import com.sal.dvdlibrary.dao.dvdLibraryDao;
 import com.sal.dvdlibrary.ui.DvdLibraryView;
 
 public class DvdLibraryController {
+    // Declares the objects for view and dao
     private DvdLibraryView view;
     private dvdLibraryDao dao;
 
@@ -22,6 +22,26 @@ public class DvdLibraryController {
 
                 switch (menuSelection) {
                     //Implement Switch case
+                    case 1:
+                        listDvds();
+                        break;
+                    case 2:
+                        createDvd();
+                        break;
+                    case 3:
+                        viewDvd();
+                        break;
+                    case 4:
+                        removeDvd();
+                        break;
+                    case 5:
+                        editDvd();
+                        break;
+                    case 6:
+                        keepGoing = false;
+                        break;
+                    default:
+                        unknownCommand();
 
                 }
 
