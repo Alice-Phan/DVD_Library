@@ -2,8 +2,10 @@ package com.sal.dvdlibrary.dao;
 
 import com.sal.dvdlibrary.dto.DvD;
 
-import java.util.HashMap;
-import java.util.List;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.util.*;
 
 public class DvdLibraryDaoFileImpl implements dvdLibraryDao {
 
@@ -25,21 +27,19 @@ public class DvdLibraryDaoFileImpl implements dvdLibraryDao {
     public DvD addDvd(String title, DvD dvd)
     {
         //implement
-        throws DvdLibraryDaoException {
-            loadDvdFile();
-            DvD newDvd = dvds.put(title, dvd);
-            writeDvdFile();
-            return newDvd;
-    }
+        DvD prevDvd = dvds.put(title, dvd);
+        return  prevDvd;
+
     }
 
     /*
-    This code gets all of the DvDs objects out of the dvds map as a collection by calling the values() method.
+    This code gets all the DvDs objects out of the dvds map as a collection by calling the values() method.
      */
     @Override
     public List<DvD> getAllDvds() throws DvdLibraryDaoException {
 
         //implement
+        return new ArrayList<DvD>(dvds.values());
     }
 
     /*
@@ -49,12 +49,17 @@ public class DvdLibraryDaoFileImpl implements dvdLibraryDao {
     public DvD getDvd(String title)throws DvdLibraryDaoException {
 
         //implement
+        return dvds.get(title);
+
     }
 
     @Override
     public DvD removeDvd(String title) throws DvdLibraryDaoException{
 
         //implement
+        DvD removedDvd = dvds.remove(title);
+        writeDvdFile();
+        return removedDvd;
     }
 
 
@@ -65,17 +70,65 @@ public class DvdLibraryDaoFileImpl implements dvdLibraryDao {
      */
     private DvD unmarshallDvd(String dvdAsText) {
         //implement
+        String[] dvdTokens = dvdAsText.split(DELIMITER);
+        String dvdTitle = dvdTokens[0];
+        System.out.println(dvdTitle);
+        DvD dvdFromFile = new DvD(dvdTitle);
+        System.out.println(dvdTokens[1]);
+        dvdFromFile.setReleaseDate(dvdTokens[1]);
+        dvdFromFile.setMPAA(dvdTokens[2]);
+        dvdFromFile.setDirectorsName(dvdTokens[3]);
+        dvdFromFile.setStudio(dvdTokens[4]);
+        dvdFromFile.setUserRating(dvdTokens[5]);
+
+        return dvdFromFile;
     }
 
     /*
     Method to Load file DVD_FILE into memory
+    Open the file for reading
+    For each line in the file: read the line into a String variable,
+    pass the line to our unmarshallDvd method to parse it into DVD
+    Put the newly created and initialized DVD object into the DVD
      */
     private void loadDvdFile() throws DvdLibraryDaoException {
         //implement
+        Scanner scanner;
+        try {
+            scanner = new Scanner(
+                    new BufferedReader(
+                            new FileReader(DVD_FILE)));
+
+        } catch (FileNotFoundException e) {
+            throw new DvdLibraryDaoException("-_- Could not load dvd data into memory.", e);
+        }
+        String currentLine;
+        DvD currentDvd;
+        while (scanner.hasNextLine()) {
+            currentLine = scanner.nextLine();
+            currentDvd = unmarshallDvd(currentLine);
+            dvds.put(currentDvd.getTitle(), currentDvd);
+        }
+        // close scanner
+        scanner.close();
+
     }
 
     private String marshallDvd(DvD aDvd) {
         //implement
+        // We need to turn a Dvd object into a line of text
+        // Get out each property, and concatenate with our DELIMITER as a kind of spacer
+
+        // Start with the dvd title
+        String dvdAsText = aDvd.getTitle() + DELIMITER;
+        // and add the rest of the properties in the correct order
+        dvdAsText += aDvd.getReleaseDate() + DELIMITER;
+        dvdAsText += aDvd.getMPAA() + DELIMITER;
+        dvdAsText += aDvd.getDirectorsName() + DELIMITER;
+        dvdAsText += aDvd.getStudio() + DELIMITER;
+        dvdAsText += aDvd.getUserRating() + DELIMITER;
+
+        return dvdAsText;
     }
 
     /**
