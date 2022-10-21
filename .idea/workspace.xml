@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2222899e-7575-48e5-b989-b64bdf57520b" name="Changes" comment="Implement the method that takes a list of DVD objects as a parameter and displays the info for each Dvd to the screen">
+    <list default="true" id="2222899e-7575-48e5-b989-b64bdf57520b" name="Changes" comment="Implement code for the methods that displays dvd info, and removes dvd">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/sal/dvdlibrary/ui/DvdLibraryView.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/ui/DvdLibraryView.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/com/sal/dvdlibrary/controller/DvdLibraryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/sal/dvdlibrary/controller/DvdLibraryController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +74,14 @@
       <option name="project" value="LOCAL" />
       <updated>1666328018717</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Implement code for the methods that displays dvd info, and removes dvd">
+      <created>1666329075866</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666329075866</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -93,6 +100,7 @@
     <MESSAGE value="Worked on DvD class" />
     <MESSAGE value="Write methods to print Menu and Edit menu" />
     <MESSAGE value="Implement the method that takes a list of DVD objects as a parameter and displays the info for each Dvd to the screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement the method that takes a list of DVD objects as a parameter and displays the info for each Dvd to the screen" />
+    <MESSAGE value="Implement code for the methods that displays dvd info, and removes dvd" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement code for the methods that displays dvd info, and removes dvd" />
   </component>
 </project>

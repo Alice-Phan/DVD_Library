@@ -1,7 +1,11 @@
 package com.sal.dvdlibrary.controller;
 
 import com.sal.dvdlibrary.dao.DvdLibraryDaoException;
+import com.sal.dvdlibrary.dao.dvdLibraryDao;
+import com.sal.dvdlibrary.dto.DvD;
 import com.sal.dvdlibrary.ui.DvdLibraryView;
+
+import java.util.List;
 
 public class DvdLibraryController {
     // Declares the objects for view and dao
@@ -10,6 +14,11 @@ public class DvdLibraryController {
 
     public DvdLibraryController(DvdLibraryView view, dvdLibraryDao dao) {
         //Initialize View and Dao
+        this.dao = dao;
+        this.view = view;
+    }
+
+    public DvdLibraryController(dvdLibraryDao myDao, DvdLibraryView myView) {
     }
 
     public void run() {
@@ -65,6 +74,10 @@ public class DvdLibraryController {
      */
     private void createDvd() throws DvdLibraryDaoException {
         // implement
+        view.displayCreateDvDBanner();
+        DvD newDvd = view.getNewDvDInfo();
+        dao.addDvd(newDvd.getTitle(), newDvd);
+        view.displayCreateSuccessBanner();
     }
 
     /*
@@ -73,13 +86,21 @@ public class DvdLibraryController {
      */
     private void listDvds() throws DvdLibraryDaoException {
         //implement
+        view.displayDisplayAllBanner();
+        List<DvD> dvDList = dao.getAllDvds();
+        view.displayDvdList(dvDList);
     }
 
     /*
-    This method asks the view to display the View dvd banner and get the titlr from the user
+    This method asks the view to display the View dvd banner and get the title from the user
      */
     private void viewDvd() throws DvdLibraryDaoException {
         //implement
+        view.displayDisplayDvdBanner();
+        String title = view.getDvdTitleChoice();
+        DvD dvD = dao.getDvd(title);
+        view.displayDvd(dvD);
+
     }
 
     /*
@@ -87,6 +108,11 @@ public class DvdLibraryController {
      */
     private void removeDvd() throws DvdLibraryDaoException {
         //implement
+        view.displayRemoveDvdBanner();
+        String dvdTitle = view.getDvdTitleChoice();
+        DvD removedDvd = dao.removeDvd(dvdTitle);
+        view.displayRemoveResult(removedDvd);
+
     }
 
     private void editDvd() throws DvdLibraryDaoException {
