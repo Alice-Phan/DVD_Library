@@ -2,9 +2,7 @@ package com.sal.dvdlibrary.dao;
 
 import com.sal.dvdlibrary.dto.DvD;
 
-import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
 import java.util.*;
 
 public class DvdLibraryDaoFileImpl implements dvdLibraryDao {
@@ -145,12 +143,33 @@ public class DvdLibraryDaoFileImpl implements dvdLibraryDao {
         // handle any errors that occur.
         //implement
 
+
+        PrintWriter out;
+        try {
+            out = new PrintWriter(new FileWriter(DVD_FILE));
+        } catch (IOException e) {
+            throw new DvdLibraryDaoException("Could not hold DVD data.");
+        }
+
         // Write out the DvD objects to the DVD file.
         // NOTE TO THE APPRENTICES: We could just grab the dvd map,
         // get the Collection of dvd and iterate over them but we've
         // already created a method that gets a List of dvds so
         // we'll reuse it.
         //implement
+        String dvdAsText;
+        List<DvD> dvDList = this.getAllDvds();
+        for (DvD currentDvd : dvDList) {
+            // turn a Dvd into a String
+            dvdAsText = marshallDvd(currentDvd);
+            // write the Dvd object to the file
+            out.println(dvdAsText);
+            // force PrintWriter to write Line to the file
+            out.flush();
+        }
+        // Clean up
+        out.close();
+
     }
 
     @Override

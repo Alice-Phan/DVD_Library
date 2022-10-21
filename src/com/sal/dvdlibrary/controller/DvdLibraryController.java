@@ -18,8 +18,8 @@ public class DvdLibraryController {
         this.view = view;
     }
 
-    public DvdLibraryController(dvdLibraryDao myDao, DvdLibraryView myView) {
-    }
+//    public DvdLibraryController(dvdLibraryDao myDao, DvdLibraryView myView) {
+//    }
 
     public void run() {
         boolean keepGoing = true;
