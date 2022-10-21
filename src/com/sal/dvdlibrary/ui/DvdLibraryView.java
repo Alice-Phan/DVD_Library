@@ -99,7 +99,7 @@ public class DvdLibraryView {
     }
 
     /*
-    Shows the dtudent banner
+    Shows the dvd banner
      */
     public void displayDisplayDvdBanner() {
         io.print("=== Display Dvd ===");
@@ -117,6 +117,20 @@ public class DvdLibraryView {
      */
     public void displayDvd(DvD dvd) {
         //implement
+        if (dvd != null) {
+            io.print(dvd.getTitle());
+            io.print(dvd.getReleaseDate());
+            io.print(dvd.getMPAA());
+            io.print(dvd.getDirectorsName());
+            io.print(dvd.getStudio());
+            io.print(dvd.getUserRating());
+            io.print("");
+        } else {
+            io.print("No such DVD");
+
+        }
+        io.print("Please hit enter to continue.");
+
     }
 
     public void displayRemoveDvdBanner() {
@@ -125,6 +139,12 @@ public class DvdLibraryView {
 
     public void displayRemoveResult(DvD dvdRecord) {
         //implement
+        if(dvdRecord != null) {
+            io.print("DVD was successfully removed");
+        } else {
+            io.print("No such DVD.");
+        }
+        io.readString("Please hit enter to continue.");
     }
 
     public void displayExitBanner() {
